@@ -89,35 +89,6 @@ docker-compose exec [服务名称] bash
 docker-compose exec php-fpm bash
 ```
 
-## 版本控制
-
-项目使用 Git 进行版本控制，主要分支说明：
-
-- `main`: 主分支，稳定版本
-- `develop`: 开发分支，最新功能
-
-### Git 常用命令
-
-```bash
-# 初始化仓库
-git init
-
-# 添加文件到暂存区
-git add .
-
-# 提交更改
-git commit -m "提交说明"
-
-# 推送到远程仓库
-git push origin main
-
-# 拉取最新代码
-git pull origin main
-
-# 创建并切换到新分支
-git checkout -b feature/new-feature
-```
-
 ## 常见问题
 
 1. 端口冲突：如果 80 或 3306 端口已被占用，请修改 docker-compose.yml 文件中的端口映射。
