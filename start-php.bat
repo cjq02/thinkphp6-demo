@@ -15,6 +15,10 @@ REM 检查端口是否已被占用
 netstat -ano | findstr :9000
 if %ERRORLEVEL% EQU 0 (
   echo 警告: 端口9000已被占用，可能需要先关闭已运行的PHP-CGI
+  echo 请检查是否存在其他PHP-CGI进程，并手动关闭
+  echo 执行命令: taskkill /F /PID %pid%
+  pause
+  exit
 )
 
 echo 正在启动 PHP-CGI...

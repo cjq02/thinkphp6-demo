@@ -19,7 +19,7 @@ return [
             // 数据库类型
             'type'              => 'mysql',
             // 服务器地址
-            'hostname'          => env('database.hostname', 'mysql'),
+            'hostname'          => env('database.hostname', '127.0.0.1'),
             // 数据库名
             'database'          => env('database.database', 'thinkphp'),
             // 用户名
@@ -31,7 +31,7 @@ return [
             // 数据库连接参数
             'params'            => [],
             // 数据库编码默认采用utf8
-            'charset'           => env('database.charset', 'utf8mb4'),
+            'charset'           => 'utf8',
             // 数据库表前缀
             'prefix'            => env('database.prefix', ''),
             // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
@@ -52,4 +52,6 @@ return [
             'fields_cache'      => false,
         ],
     ],
+    // 是否开启数据库缓存
+    'cache_enable'    => true,
 ]; 
